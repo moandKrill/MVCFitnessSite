@@ -1,0 +1,657 @@
+/* 
+Ширина блока                    width: 1300px 
+Высота блока                    height: 1352px;
+Блок по центру                  margin:  0 auto;
+Выстроить дочерние блоки в ряд  display: flex; 
+Выровнить блоки по ширине       justify-content: space-between;
+Закругление углов в блоке       border-radius: 8px;
+
+Масштабировать картинку в родительском контейнере  
+.about-foto img{
+    width: 100%;
+} 
+Внутренние отступы 
+    padding-top: 10px;  сверху
+    padding-bottom: 10px; снизу
+
+--------------------------Работа с текстом
+Шрифт, размер и цвет
+    font-family: Arial;
+    font-size: 40px;
+    color: #222222;
+Межстрочный интервал
+    line-height: 1.6;
+Жирность текста  
+    font-weight: 700; (если 400 - то обычный, не жирный
+Убрать подчёркивание у ссылок - text-decoration: none;
+
+Заливка фона цветом      background-color: rgb(25, 29, 45);
+                         background-color: #0000ff;
+                         background-color: red;
+
+Выровнить текст по центру
+text-align:center;
+
+Для выравнивания фото или текста по вертикали и горизонтали нужно сделать блок флексом и поставить 2 свойства 
+ display: flex;
+ justify-content: center;
+ align-items:center;
+
+ Вставка фонового изображения 
+    background-image: url(../images/fon-feedback.png);    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+*/
+/* Сброс стилей */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+*, html {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p, div, a {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Для подключения внешнего шрифта кроме подключения через гуг шрифты. можно скопировать в папку сайта font  и указать параметры 
+
+@font-face {
+  // название шрифта(чтобы не запутаться лучше указать название папки со шрифтом) 
+  font-family: "RalewayRegular"; 
+  // адрес шрифта и тип 
+  src: url("../font/RalewayRegular.ttf") format("truetype"); 
+  font-style: normal; 
+  font-weight: normal; 
+} 
+
+*/
+
+
+/* Сброс стилей конец*/
+
+.container {
+    width: 1160px;
+    margin: 0 auto;
+}
+
+.top {
+    width: 100%;
+    height: 80px;
+    background: rgb(228, 48, 113);
+}
+
+.top__logo-menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.top__logo {
+    padding-top: 20px;
+}
+
+.top__menu ul {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+    .top__menu ul a {
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 109.5%;
+        letter-spacing: 0px;
+        text-align: center;
+        padding-right: 60px;
+        text-decoration: none;
+    }
+
+        .top__menu ul a:hover {
+            text-decoration: underline;
+        }
+
+.top__btn {
+}
+
+.top__menu ul .top__btn a {
+    color: rgb(228, 48, 113);
+    border-radius: 200px;
+    background: rgb(255, 255, 255);
+    padding: 16px 60px;
+}
+
+.slider {
+    width: 100%;
+    height: 700px;
+    background-image: url(../images/slide1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+.slider__offer {
+    padding-top: 250px;
+}
+
+.slider h1 {
+    color: rgb(255, 255, 255);
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 110%;
+    text-align: center;
+    box-shadow: 0px 5px 0px -2px rgba(0, 0, 0, 0.2);
+}
+
+.slider__btn {
+    text-align: center;
+    margin-top: 60px;
+}
+
+    .slider__btn a {
+        padding: 26px 56px;
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
+        border-radius: 38.5px;
+        background: #e43071;
+        text-decoration: none;
+        transition: 0.3s ease-in-out;
+    }
+
+        .slider__btn a:hover {
+            color: #e43071;
+            font-size: 18px;
+            background: #ffffff;
+        }
+
+.about {
+    margin-top: 94px;
+    margin-bottom: 60px;
+}
+
+.about__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about__photo {
+    width: 40%;
+    text-align: left;
+}
+
+    .about__photo img {
+        width: 100%;
+    }
+
+.about__info {
+    width: 45%;
+}
+
+    .about__info h2 {
+        color: rgb(228, 48, 113);
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 1.1;
+        text-align: left;
+        padding-top: 80px;
+        padding-bottom: 6px;
+    }
+
+    .about__info p {
+        color: rgb(66, 66, 66);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.4;
+        text-align: left;
+    }
+
+.about__btn {
+    margin-top: 60px;
+}
+
+    .about__btn a {
+        color: rgb(228, 48, 113);
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 37px;
+        text-align: center;
+        box-sizing: border-box;
+        /* Premium Pink */
+        border: 2px solid rgb(228, 48, 113);
+        border-radius: 38.5px;
+        padding: 15px 65px;
+        text-decoration: none;
+        transition: 0.3s ease;
+    }
+
+        .about__btn a:hover {
+            color: rgb(241, 240, 240);
+            background-color: #e43071;
+        }
+
+.premium-gym {
+    margin-top: 60px;
+    margin-bottom: 60px
+}
+
+.premium__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.premium__info {
+    width: 45%;
+}
+
+.premium__photo {
+    width: 45%;
+    text-align: right;
+}
+
+.premium__info h2 {
+    color: rgb(228, 48, 113);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 60px;
+    text-align: left;
+}
+
+.premium__info p {
+    color: rgb(66, 66, 66);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 37px;
+    text-align: left;
+}
+
+.premium__btn {
+    margin-top: 40px;
+    ;
+}
+
+    .premium__btn a {
+        color: rgb(228, 48, 113);
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 37px;
+        letter-spacing: 0px;
+        text-align: center;
+        /* Premium Pink */
+        border: 2px solid rgb(228, 48, 113);
+        border-radius: 38.5px;
+        padding: 15px 65px;
+        text-decoration: none;
+        transition: 0.3s ease;
+    }
+
+        .premium__btn a:hover {
+            color: rgb(241, 240, 240);
+            background-color: #e43071;
+        }
+
+.review {
+    height: 491px;
+    background-color: #e43071;
+}
+
+.review__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.review__info {
+    margin-top: 112px;
+    width: 48%;
+}
+
+    .review__info h2 {
+        color: rgb(255, 255, 255);
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 60px;
+        text-align: left;
+    }
+
+    .review__info p {
+        color: rgb(255, 255, 255);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 37px;
+        text-align: left;
+    }
+
+    .review__info h6 {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+    }
+
+.review__photo {
+    width: 48%;
+    display: flex;
+    justify-content: space-between;
+}
+
+    .review__photo img {
+        width: 48%;
+    }
+
+.review__app {
+    margin-top: 20px;
+}
+
+    .review__app img {
+        border-radius: 15px;
+    }
+
+.programs__items {
+    display: flex;
+    justify-content: space-between;
+}
+
+    .programs__items img {
+        width: 32%;
+    }
+
+.programs__title {
+    margin-top: 112px;
+    margin-bottom: 74px;
+}
+
+    .programs__title h2 {
+        color: rgb(228, 48, 113);
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 1.1;
+        text-align: left;
+        padding-bottom: 40px;
+    }
+
+    .programs__title p {
+        color: rgb(66, 66, 66);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.8;
+        text-align: left;
+        width: 28%;
+    }
+
+.programs__btn {
+    margin-top: 50px;
+    text-align: center;
+}
+
+    .programs__btn a {
+        background-color: #e43071;
+        color: rgb(255, 255, 255);
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 37px;
+        text-align: center;
+        box-sizing: border-box;
+        /* Premium Pink */
+        border: 2px solid rgb(228, 48, 113);
+        border-radius: 38.5px;
+        padding: 15px 65px;
+        text-decoration: none;
+        transition: 0.3s ease;
+    }
+
+        .programs__btn a:hover {
+            background-color: #ffffff;
+            color: #e43071;
+        }
+
+.trainers {
+    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    background: linear-gradient(180.00deg, rgb(255, 255, 255),rgba(255, 255, 255, 0) 100%),rgb(249, 213, 225);
+}
+
+.trainers__info {
+    margin-top: 60px;
+    width: 45%;
+    margin-bottom: 90px;
+}
+
+    .trainers__info h2 {
+        color: rgb(228, 48, 113);
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 1.1;
+        text-align: left;
+        padding-bottom: 40px;
+    }
+
+    .trainers__info p {
+        color: rgb(66, 66, 66);
+        position: static;
+        width: 540px;
+        height: 156px;
+        line-height: 1.8;
+        /* Auto layout */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 30;
+        padding: 0px;
+    }
+
+.trainers__items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+    .trainers__items h6 {
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+    }
+
+    .trainers__items p {
+        color: rgb(0, 0, 0);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0%;
+        text-align: left;
+    }
+
+.trainers__item {
+    width: 30%;
+    margin-bottom: 30px;
+}
+
+    .trainers__item img {
+        width: 100%;
+    }
+
+footer {
+    height: 505px;
+    width: 100%;
+    background-color: black;
+}
+
+.footer__top {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 153px;
+}
+
+.footer__media {
+    display: flex;
+    justify-content: space-between;
+    position: static;
+    width: 25%;
+    height: 96px;
+    display: flex;
+    flex-direction: column;
+    color: rgb(217, 219, 225);
+    font-family: Manrope;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+    .footer__media img {
+        width: 40%;
+        height: auto;
+        padding-bottom: 24px;
+    }
+
+.footer__menu {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+    .footer__menu h2 {
+        padding-bottom: 24px;
+        color: rgb(255, 255, 255);
+        font-family: Manrope;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 30px;
+        text-align: left;
+    }
+
+    .footer__menu ul a {
+        padding-bottom: 24px;
+        color: rgb(255, 255, 255);
+        font-family: Manrope;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        text-decoration: none;
+    }
+
+.footer__contacts {
+    width: 25%;
+}
+
+.footer__items h2 {
+    padding-bottom: 24px;
+    color: rgb(255, 255, 255);
+    font-family: Manrope;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    text-align: left;
+}
+
+
+.footer__item {
+    color: rgb(217, 219, 225);
+    font-family: Manrope;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.footer__item-foto {
+    margin-right: 10px;
+}
+
+
+.footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 90px;
+}
+
+    .footer__bottom p {
+        color: rgb(217, 219, 225);
+        font-family: Manrope;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+    }
+
+    .footer__bottom ul {
+        display: flex;
+        list-style: none;
+    }
+
+        .footer__bottom ul a {
+            color: rgb(217, 219, 225);
+            padding: 8px;
+            font-family: Manrope;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: left;
+            text-decoration: none;
+        }
+
+/*.top, .slider, .banner-slider, .review, footer {
+    display: none;
+}*/

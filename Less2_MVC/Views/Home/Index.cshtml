@@ -1,0 +1,133 @@
+﻿@{
+    ViewData["Title"] = "Главная страница";
+}
+
+<section class="about">
+    <div class="container">
+        <div class="about__wrapper">
+            <div class="about__photo">
+                <img src="images/about_photo.jpg" alt="">
+            </div>
+            <div class="about__info">
+                <h2>Встречай свое новое тело</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget lectus urna. Nulla magna tortor, bibendum in molestie sed, gravida nec felis. Sed id egestasegestas risus, ut imperdiet augue.</p>
+                <div class="about__btn">
+                    <a href="#">Узнать подробнее</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="programs">
+</section>
+<section class="banner-slider">
+</section>
+<section class="premium-gym">
+    <div class="container">
+        <div class="premium__wrapper">
+            <div class="premium__info">
+                <h2>Премиум зал</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget lectus urna. Nulla magna tortor, bibendum in molestie sed, gravida nec felis. Sed id egestasegestas risus, ut imperdiet augue.</p>
+                <div class="premium__btn">
+                    <a href="#">Узнать подробнее</a>
+                </div>
+            </div>
+            <div class="premium__photo">
+                <img src="images/premium_photo.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="programs">
+    <div class="container">
+        <div class="programs__title">
+            <h2>Современные залы и лучшие тренажеры</h2>
+            <p>Лучшее оборудование, просторные залы, 2 бассейна 50 и 25 метров. А также множество индивидуальных и групповых программ</p>
+        </div>
+        <div class="programs__items">
+            <img src="images/item1.png" alt="">
+            <img src="images/item2.png" alt="">
+            <img src="images/item3.png" alt="">
+        </div>
+        <div class="programs__btn">
+            <a href="#">Смотреть все залы</a>
+
+        </div>
+    </div>
+</section>
+
+<section class="trainers">
+    <div class="container">
+        <div class="trainers__info">
+            <h2>Наш тренерский состав</h2>
+            <p>Мы собрали команду настоящих профессионалов своего дела. Каждый тренер непрерывно совершенствуется и повышает квалификацию. Благодаря многолетнему опыту и многопрофильному образованию наших преподавателей каждое занятие выстраивается по новому сценарию, творчески и с заботой о каждом клиенте.</p>
+        </div>
+        <div class="trainers__items">
+
+            @foreach (var trainer in Model)
+            {
+                <div class="trainers__item">
+                    <img src="@trainer.photo_url" alt="@trainer.name">
+                    <h6>@trainer.name</h6>
+                    <p>@trainer.trainer_info</p>
+                </div>
+            }
+             @* <div class="trainers__item">
+                <img src="images/trainer1.jpg" alt="Иванов Андрей">
+                <h6>Иванов Андрей</h6>
+                <p>Мастер спорта. Специалист. Профессионал. Красавчик.</p>
+            </div>
+            <div class="trainers__item">
+                <img src="images/trainer2.jpg" alt="Петрова Ольга">
+                <h6>Петрова Ольга</h6>
+                <p>Кандидат в мастера спорта. Фитнес-тренер. Диетолог.</p>
+            </div>
+            <div class="trainers__item">
+                <img src="images/trainer3.jpg" alt="Сидоров Алексей">
+                <h6>Сидоров Алексей</h6>
+                <p>Мастер спорта по плаванию. Инструктор по йоге.</p>
+            </div>
+            <div class="trainers__item">
+                <img src="images/trainer4.jpg" alt="Козлова Елена">
+                <h6>Козлова Елена</h6>
+                <p>Сертифицированный тренер по пилатесу. Реабилитолог.</p>
+            </div>
+            <div class="trainers__item">
+                <img src="images/trainer1.jpg" alt="Иванов Андрей">
+                <h6>Иванов Андрей</h6>
+                <p>Мастер спорта. Специалист. Профессионал. Красавчик.</p>
+            </div>
+            <div class="trainers__item">
+                <img src="images/trainer2.jpg" alt="Петрова Ольга">
+                <h6>Петрова Ольга</h6>
+                <p>Кандидат в мастера спорта. Фитнес-тренер. Диетолог.</p>
+            </div> *@ 
+        </div>
+    </div>
+</section>
+
+
+<section class="review">
+    <div class="container">
+        <div class="review__wrapper">
+            <div class="review__info">
+                <h2>Не забывай наше приложение</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget lectus urna. Nulla magna tortor, bibendum in molestie sed, gravida nec felis. Sed id egestasegestas risus, ut imperdiet augue.</p>
+
+
+                <div class="review__app">
+                    <h6>Скачать сейчас</h6>
+                    <img src="images/appios.jpg" alt="">
+                    <img src="images/appandroid.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="review__photo">
+                <img src="images/android.png" alt="">
+                <img src="images/ios.png" alt="">
+            </div>
+        </div>
+
+    </div>
+</section>

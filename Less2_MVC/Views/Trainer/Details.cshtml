@@ -1,0 +1,42 @@
+﻿@model Less2_MVC.Models.Trainer
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Trainer</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.telephone)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.telephone)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.trainer_info)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.trainer_info)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.photo_url)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.photo_url)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.id_trainer">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

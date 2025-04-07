@@ -1,0 +1,78 @@
+﻿@media only screen and (max-width: 1024px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .about__info h2 {
+        padding-top: 16px;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .trainers__info {
+        width: 90%;
+    }
+
+        .trainers__info p {
+            width: 100%;
+        }
+
+    .trainers__item {
+        width: 48%;
+    }
+
+    .about__info {
+        width: 55%;
+    }
+
+    .about__photo {
+        width: 40%;
+    }
+
+    .about__info h2 {
+        padding-top: 0px;
+        font-size: 28px;
+    }
+
+    .programs__title p {
+        width: 100%;
+    }
+}
+
+
+
+@media only screen and (max-width: 425px) {
+    .trainers__info {
+        width: 100%;
+    }
+
+    .trainers__item {
+        width: 100%;
+    }
+
+    .about__wrapper {
+        flex-wrap: wrap;
+    }
+
+    .about__photo, .about__info {
+        width: 100%;
+    }
+
+        .about__info h2 {
+            padding-top: 0px;
+            font-size: 40px;
+        }
+}
+
+
+@media only screen and (max-width: 378px) {
+}
+
+
+
+@media only screen and (max-width: 320px) {
+}
