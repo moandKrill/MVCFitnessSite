@@ -52,7 +52,7 @@ Build a complete, structured web app from scratch
 
 Strengthen understanding of backend + frontend interaction
 
-🚀 Future Improvements
+ Future Improvements
 
 Add authentication (ASP.NET Identity)
 
